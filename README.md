@@ -1,5 +1,5 @@
 # YahooPy
-general simple yahooFinance automation
+basic yahooFinance automation
 
 
 manually downloads csv files with constant format off yahoofinance.com
