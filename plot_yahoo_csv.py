@@ -2,13 +2,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import platform
 import os
+import getpass
 
 
 def plot_yahoo_csv(user, file, x, y, ret=False, save=False, show=False):
     if platform.system() == "Windows":
+        user = None
         path = "C:\\Users\\\{}\\Downloads\\{}".format(user, file)
         loc = "C:\\Users\\\{}\\Desktop".format(user)
     elif platform.system() == "Darwin":
+        user = getpass.getuser()
         path = "/Users/{}/Downloads/{}".format(user, file)
         loc = "/Users/{}/Desktop".format(user)
     data = pd.read_csv(path)
